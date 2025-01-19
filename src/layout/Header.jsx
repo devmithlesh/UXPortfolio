@@ -1,4 +1,4 @@
-import { CreateIcon } from '@/app/icon/icon'
+import { CreateIcon } from '@/icon/icon'
 import Button from '@/component/Button/Button'
 import React from 'react'
 

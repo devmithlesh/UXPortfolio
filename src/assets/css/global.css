@@ -73,14 +73,135 @@
     }
 
     .rightSideHero {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        gap: 60px;
         width: 100%;
         max-width: calc(100% - 530px);
 
         .profileImg {
             width: 100%;
-            max-width: 426px;
+            max-width: 460px;
+        }
+    }
+
+    .verticalFontBlock {
+        width: 100%;
+        max-width: 25px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        writing-mode: vertical-lr;
+
+        .borderLineVertical {
+            width: 1px;
+            height: 250px;
+            background: #595959;
+        }
+
+        .socialMediaBlock {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .socialMediaBlock svg path {
+            transition: 0.3s;
+        }
+
+        h3 {
+            color: #595959;
+            line-height: 150%;
+            font-family: var(--arialRegular);
+        }
+    }
+
+}
+
+/*End hero Section */
+
+/* my Design Section */
+.myDesignSection {
+    width: 100%;
+
+    .myDesignBlock {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .contentCardProcess {
+        text-align: center;
+
+        p {
+            color: #595959;
+            line-height: 120%;
+        }
+    }
+
+    .designProcessCardWrap {
+        width: 100%;
+
+        .designImage {
+            width: 100%;
         }
     }
 }
 
-/*End hero Section */
+/* End my Design Section */
+
+/* experence section */
+.toolUseSection {
+    width: 100%;
+
+    .experienceWithTollWrap {
+        display: flex;
+        align-items: flex-start;
+        gap: 150px;
+    }
+
+    .leftSideToolsUse {
+        width: 100%;
+        max-width: 190px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .rightSideExperience {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        width: 100%;
+        max-width: calc(100% - 340px);
+    }
+
+    .iconUseBlock {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 28px;
+    }
+
+    .rightSideExperience ul {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .rightSideExperience ul li {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        span {
+            line-height: normal;
+        }
+    }
+
+}
+
+/* End experence section */
