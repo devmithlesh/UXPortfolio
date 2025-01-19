@@ -9,9 +9,9 @@ const CreateIcon = () => {
     )
 }
 
-const ArrowIconRight = () => {
+const ArrowIconRight = ({ height, width }) => {
     return (
-        <svg width="21" height="9" viewBox="0 0 21 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width={width ? width : '21'} height={height ? height : '9'} viewBox="0 0 21 9" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20.3536 4.86185C20.5488 4.66659 20.5488 4.35001 20.3536 4.15475L17.1716 0.972767C16.9763 0.777505 16.6597 0.777505 16.4645 0.972767C16.2692 1.16803 16.2692 1.48461 16.4645 1.67987L19.2929 4.5083L16.4645 7.33673C16.2692 7.53199 16.2692 7.84857 16.4645 8.04383C16.6597 8.2391 16.9763 8.2391 17.1716 8.04383L20.3536 4.86185ZM0 5.0083H20V4.0083H0V5.0083Z" fill="#DA4040" />
         </svg>
 

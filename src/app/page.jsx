@@ -2,6 +2,7 @@ import Header from '@/layout/Header'
 import Link from 'next/link'
 import React from 'react'
 import { ArrowIconRight, FiverIcon, InstagramIcon, LinkedinIcon, MediaIcon, UpworkIcon } from '../icon/icon'
+import Button from '@/component/Button/Button'
 
 const page = () => {
     return (
@@ -138,6 +139,52 @@ const page = () => {
                                     </h4>
                                 </li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className='paddingY myProjectSection'>
+                <div className='container'>
+                    <div className='commonHeading'>
+                        <h2 className='heading2'>My design Projects
+                            <img src="/assets/svg/projectVector.svg" alt="" />
+                        </h2>
+                        <Button name={'View all'} className={'red_arrow_link'} svgIcon={<ArrowIconRight />} />
+                    </div>
+                    <div className='myProjectBlock mt50'>
+                        <div className='myProjectCardWrapper'>
+                            <div className='leftProjectCard'>
+                                <h3 className='text28b'>CreateAR a portfolio <br className='mobHide' /> website for AR Creaters</h3>
+                                <div className='tabWrapper'>
+                                    <div className='tagBlock text16r'>UI UX Design</div>
+                                    <div className='tagBlock text16r'>Figma</div>
+                                    <div className='tagBlock text16r'>Website Design</div>
+                                </div>
+                                <p className='text16r'>The primary goal is to establish a
+                                    platform that connects creators specializing in AR
+                                    (Augmented Reality) filters with businesses seeking
+                                    innovative and engaging filters for their brand. </p>
+
+                                <Button name={'View complete design'} svgIcon={<ArrowIconRight />} className={'red_arrow_link'} />
+                            </div>
+                            <img src="/assets/img/projectImage1.png" alt="projectImage1" className='projectcardImg' />
+                        </div>
+
+                        <div className='myProjectCardWrapper'>
+                            <div className='leftProjectCard'>
+                                <h3 className='text28b'>Dating application</h3>
+                                <div className='tabWrapper'>
+                                    <div className='tagBlock text16r'>UI UX Design</div>
+                                    <div className='tagBlock text16r'>Figma</div>
+                                    <div className='tagBlock text16r'>Application Design</div>
+                                </div>
+                                <p className='text16r'>The primary goal is to create a dating application that facilitates meaningful connections between individuals. They aim to provide a platform where users can find compatible matches based on interests, 
+                                    preferences, and shared values. </p>
+
+                                <Button name={'View complete design'} svgIcon={<ArrowIconRight />} className={'red_arrow_link'} />
+                            </div>
+                            <img src="/assets/img/projectImage1.png" alt="projectImage1" className='projectcardImg' />
                         </div>
                     </div>
                 </div>
