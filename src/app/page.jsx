@@ -3,9 +3,9 @@ import Link from 'next/link'
 import React from 'react'
 import { ArrowIconRight, FiverIcon, InstagramIcon, LinkedinIcon, MediaIcon, UpworkIcon, ViewEventIcon } from '../icon/icon'
 import Button from '@/component/Button/Button'
-import Swiper from 'swiper'
 
 const page = () => {
+
     return (
         <div className='mainPage'>
             <Header />
@@ -214,48 +214,6 @@ const page = () => {
                             </div>
                         </div>
 
-                        <Swiper
-                            slidesPerView={1}
-                            spaceBetween={10}
-                            pagination={{
-                                clickable: true,
-                            }}
-                            navigation={{
-                                prevEl: prevButtonRef.current,
-                                nextEl: nextButtonRef.current,
-                            }}
-                            onBeforeInit={(swiper) => {
-                                // Assign navigation buttons to Swiper
-                                swiper.params.navigation.prevEl = prevButtonRef.current;
-                                swiper.params.navigation.nextEl = nextButtonRef.current;
-                            }}
-                            breakpoints={{
-                                640: {
-                                    slidesPerView: 2,
-                                    spaceBetween: 20,
-                                },
-                                768: {
-                                    slidesPerView: 4,
-                                    spaceBetween: 40,
-                                },
-                                1024: {
-                                    slidesPerView: 5,
-                                    spaceBetween: 50,
-                                },
-                            }}
-                            modules={[Navigation, Pagination]}
-                            className="mySwiper"
-                        >
-                            <SwiperSlide>Slide 1</SwiperSlide>
-                            <SwiperSlide>Slide 2</SwiperSlide>
-                            <SwiperSlide>Slide 3</SwiperSlide>
-                            <SwiperSlide>Slide 4</SwiperSlide>
-                            <SwiperSlide>Slide 5</SwiperSlide>
-                            <SwiperSlide>Slide 6</SwiperSlide>
-                            <SwiperSlide>Slide 7</SwiperSlide>
-                            <SwiperSlide>Slide 8</SwiperSlide>
-                            <SwiperSlide>Slide 9</SwiperSlide>
-                        </Swiper>
                     </div>
                 </div>
             </section>
