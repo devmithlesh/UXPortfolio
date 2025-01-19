@@ -124,6 +124,9 @@
 /* my Design Section */
 .myDesignSection {
     width: 100%;
+    background: url('../../../public/assets/svg/arrowLine.svg');
+    background-repeat: no-repeat;
+    background-position: 99.5% 23%;
 
     .myDesignBlock {
         display: grid;
