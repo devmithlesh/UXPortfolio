@@ -220,7 +220,7 @@
 .myProjectSection {
     width: 100%;
 
-    .commonHeading h2 {
+    .commonHeading .iconHeading {
         position: relative;
 
         img {
@@ -287,3 +287,29 @@
 }
 
 /* End my project section */
+
+/* Event section */
+.eventSection {
+    width: 100%;
+
+    .eventBlockWrap {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .eventBlockWrap .eventCardWrapper {
+        width: 100%;
+        overflow: hidden;
+        border-radius: 8px;
+        background: var(--white);
+        box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.20);
+    }
+
+    .eventCardContent {
+        padding: 16px;
+    }
+}
+
+/* End Event section */

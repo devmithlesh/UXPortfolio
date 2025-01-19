@@ -88,7 +88,33 @@ function MediaIcon() {
     )
 }
 
+function SwiperArrow() {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width="31" height="25" viewBox="0 0 31 25" fill="none">
+            <g clip-path="url(#clip0_52_10880)">
+                <path d="M0 12.0166L28 12.0166" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M23 5.0166L30 12.0166L23 19.0166" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+            <defs>
+                <clipPath id="clip0_52_10880">
+                    <rect width="31" height="24" fill="white" transform="translate(0 0.0166016)" />
+                </clipPath>
+            </defs>
+        </svg>
+    )
+}
+
+function ViewEventIcon() {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+            <path d="M6.10896 1.87954L1.16203 6.91701L6.10896 1.87954Z" fill="black" />
+            <path d="M6.62769 6.42026L6.68602 1.29192L1.55959 1.44324M6.10896 1.87954L1.16203 6.91701" stroke="#DA4040" stroke-width="0.788392" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    )
+}
+
 export {
+    ViewEventIcon,
     CreateIcon,
     ArrowIconRight,
     InstagramIcon,
@@ -96,4 +122,5 @@ export {
     UpworkIcon,
     FiverIcon,
     MediaIcon,
+    SwiperArrow,
 }

@@ -1,8 +1,9 @@
 import Header from '@/layout/Header'
 import Link from 'next/link'
 import React from 'react'
-import { ArrowIconRight, FiverIcon, InstagramIcon, LinkedinIcon, MediaIcon, UpworkIcon } from '../icon/icon'
+import { ArrowIconRight, FiverIcon, InstagramIcon, LinkedinIcon, MediaIcon, UpworkIcon, ViewEventIcon } from '../icon/icon'
 import Button from '@/component/Button/Button'
+import Swiper from 'swiper'
 
 const page = () => {
     return (
@@ -147,7 +148,7 @@ const page = () => {
             <section className='paddingY myProjectSection'>
                 <div className='container'>
                     <div className='commonHeading'>
-                        <h2 className='heading2'>My design Projects
+                        <h2 className='heading2 iconHeading'>My design Projects
                             <img src="/assets/svg/projectVector.svg" alt="" />
                         </h2>
                         <Button name={'View all'} className={'red_arrow_link'} svgIcon={<ArrowIconRight />} />
@@ -179,13 +180,82 @@ const page = () => {
                                     <div className='tagBlock text16r'>Figma</div>
                                     <div className='tagBlock text16r'>Application Design</div>
                                 </div>
-                                <p className='text16r'>The primary goal is to create a dating application that facilitates meaningful connections between individuals. They aim to provide a platform where users can find compatible matches based on interests, 
+                                <p className='text16r'>The primary goal is to create a dating application that facilitates meaningful connections between individuals. They aim to provide a platform where users can find compatible matches based on interests,
                                     preferences, and shared values. </p>
 
                                 <Button name={'View complete design'} svgIcon={<ArrowIconRight />} className={'red_arrow_link'} />
                             </div>
-                            <img src="/assets/img/projectImage1.png" alt="projectImage1" className='projectcardImg' />
+                            <img src="/assets/img/projectImage2.png" alt="projectImage1" className='projectcardImg' />
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className='paddingY eventSection'>
+                <div className='container'>
+                    <div className='commonHeading'>
+                        <h2 className='heading2'>Events</h2>
+                        <p className='text20ri'>Mail me to enquire for an event: <Link className='textRed underline' href={'mailto:gunjancreates871@gmail.com'}> gunjancreates871@gmail.com</Link></p>
+                    </div>
+
+                    <div className='eventBlockWrap mt50'>
+                        <div className='eventCardWrapper'>
+                            <img src="/assets/img/eventCard1.png" alt="" />
+                            <div className='eventCardContent'>
+                                <h3 className='text20b mb5'>Event Name</h3>
+                                <p className='text16r mb7'>Lorem ipsum dolor sit amet consectetur.
+                                    Quisque id morbi facilisis nisl dui.
+                                    Justo velit pretium ornare egestas.
+                                    Lorem ipsum dolor sit amet consectetur.
+                                </p>
+                                <Button name={'View Event'} svgIcon={<ViewEventIcon />}
+                                    className={'viewEvent text14b'}
+                                />
+                            </div>
+                        </div>
+
+                        <Swiper
+                            slidesPerView={1}
+                            spaceBetween={10}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            navigation={{
+                                prevEl: prevButtonRef.current,
+                                nextEl: nextButtonRef.current,
+                            }}
+                            onBeforeInit={(swiper) => {
+                                // Assign navigation buttons to Swiper
+                                swiper.params.navigation.prevEl = prevButtonRef.current;
+                                swiper.params.navigation.nextEl = nextButtonRef.current;
+                            }}
+                            breakpoints={{
+                                640: {
+                                    slidesPerView: 2,
+                                    spaceBetween: 20,
+                                },
+                                768: {
+                                    slidesPerView: 4,
+                                    spaceBetween: 40,
+                                },
+                                1024: {
+                                    slidesPerView: 5,
+                                    spaceBetween: 50,
+                                },
+                            }}
+                            modules={[Navigation, Pagination]}
+                            className="mySwiper"
+                        >
+                            <SwiperSlide>Slide 1</SwiperSlide>
+                            <SwiperSlide>Slide 2</SwiperSlide>
+                            <SwiperSlide>Slide 3</SwiperSlide>
+                            <SwiperSlide>Slide 4</SwiperSlide>
+                            <SwiperSlide>Slide 5</SwiperSlide>
+                            <SwiperSlide>Slide 6</SwiperSlide>
+                            <SwiperSlide>Slide 7</SwiperSlide>
+                            <SwiperSlide>Slide 8</SwiperSlide>
+                            <SwiperSlide>Slide 9</SwiperSlide>
+                        </Swiper>
                     </div>
                 </div>
             </section>
