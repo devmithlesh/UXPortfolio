@@ -4,6 +4,83 @@
     margin: 0;
 }
 
-body {
-    color: red;
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
+
+.paddingY {
+    padding: 100px 0;
+}
+
+/* header */
+.header {
+    width: 100%;
+    border-bottom: 1px solid #EDEDED;
+
+    .headerBlock {
+        width: 100%;
+        min-height: 102px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 0;
+    }
+
+    .headerLeft {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+
+        h2 {
+            font-size: 21.25px;
+            line-height: 24.43px;
+            font-family: var(--arialBold);
+            font-weight: 700;
+
+            span {
+                font-family: var(--arialRegular);
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+/* End header */
+
+/* hero Section */
+.heroSection {
+    width: 100%;
+
+    .heroBlock {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .aboutDetailHero {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .leftSideHero {
+        width: 100%;
+        max-width: 470px;
+    }
+
+    .rightSideHero {
+        width: 100%;
+        max-width: calc(100% - 530px);
+
+        .profileImg {
+            width: 100%;
+            max-width: 426px;
+        }
+    }
+}
+
+/*End hero Section */

@@ -1,0 +1,12 @@
+.red_fill_button {
+    background: #DA4040;
+    padding: 12px 32px 12px 32px;
+    border-radius: 100px;
+    width: max-content;
+    color: var(--white);
+    transition: 0.4s;
+}
+
+.red_fill_button:hover {
+    opacity: 0.9;
+}

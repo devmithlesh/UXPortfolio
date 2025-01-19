@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: arialRegular;
+    src: url('./fonts/ARIAL.TTF');
+}
+
+@font-face {
+    font-family: arialMedium;
+    src: url('./fonts/ArialMdm.ttf');
+}
+
+@font-face {
+    font-family: arialBold;
+    src: url('./fonts/ARIALBD.TTF');
+}
+
+@font-face {
+    font-family: mistral;
+    src: url('./fonts/MISTRAL.TTF');
+}
+
+:root {
+    --white: #FFFFFF;
+    --red: #DA4040;
+    --black: #000000;
+    --black1: #595959;
+    --grey: #EDEDED;
+
+    /* foots */
+    --arialRegular: arialRegular;
+    --arialMedium: arialMedium;
+    --arialBold: arialBold;
+    --mistral: mistral;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.4px;
+    font-family: var(--arialRegular);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.red_arrow_link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--arialRegular);
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0.04em;
+    color: var(--red);
+}
+
+.red_arrow_link svg {
+    transition: 0.4s;
+}
+
+.red_arrow_link:hover svg {
+    transform: translateX(4px);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flexBetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.w100 {
+    width: 100%;
+}
+
+/* text name */
+.subTitle {
+    font-family: var(--mistral);
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 45px;
+}
+
+.textRed {
+    color: var(--red);
+}
+
+.textRedItalic {
+    color: var(--red);
+    font-style: italic;
+}
+
+.textBold {
+    font-weight: 700;
+    font-family: var(--arialBold);
+}
+
+.text16r {
+    font-family: var(--arialRegular);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0.04em;
+    color: var(--black1);
+}
+
+/* End text name */
+
+/* margin */
+.mt20 {
+    margin-top: 20px;
+}
+
+/* End margin */
