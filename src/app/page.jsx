@@ -1,10 +1,19 @@
+"use client";
+
+import { useRef } from 'react';
 import Header from '@/layout/Header'
 import Link from 'next/link'
-import React from 'react'
-import { ArrowIconRight, FiverIcon, InstagramIcon, LinkedinIcon, MediaIcon, UpworkIcon, ViewEventIcon } from '../icon/icon'
+import { ArrowIconRight, FiverIcon, InstagramIcon, LinkedinIcon, MediaIcon, SwiperArrow, UpworkIcon, ViewEventIcon } from '../icon/icon'
 import Button from '@/component/Button/Button'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules'; // Updated import path
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 const page = () => {
+
+    const prevRef = useRef(null);
+    const nextRef = useRef(null);
 
     return (
         <div className='mainPage'>
@@ -198,21 +207,101 @@ const page = () => {
                         <p className='text20ri'>Mail me to enquire for an event: <Link className='textRed underline' href={'mailto:gunjancreates871@gmail.com'}> gunjancreates871@gmail.com</Link></p>
                     </div>
 
-                    <div className='eventBlockWrap mt50'>
-                        <div className='eventCardWrapper'>
-                            <img src="/assets/img/eventCard1.png" alt="" />
-                            <div className='eventCardContent'>
-                                <h3 className='text20b mb5'>Event Name</h3>
-                                <p className='text16r mb7'>Lorem ipsum dolor sit amet consectetur.
-                                    Quisque id morbi facilisis nisl dui.
-                                    Justo velit pretium ornare egestas.
-                                    Lorem ipsum dolor sit amet consectetur.
-                                </p>
-                                <Button name={'View Event'} svgIcon={<ViewEventIcon />}
-                                    className={'viewEvent text14b'}
-                                />
-                            </div>
-                        </div>
+                    <div className='eventBlockWrap'>
+                        <button ref={prevRef} className="custom-prev-button swiperButton">
+                            <SwiperArrow className="iconRotate" />
+                        </button>
+
+                        <button ref={nextRef} className="custom-next-button swiperButton">
+                            <SwiperArrow />
+                        </button>
+
+                        <Swiper
+                            modules={[Navigation, Pagination]} // Include the Navigation module
+                            pagination={{
+                                clickable: true, // Make pagination dots clickable
+                            }}
+                            navigation={{
+                                prevEl: prevRef.current,
+                                nextEl: nextRef.current,
+                            }}
+                            onBeforeInit={(swiper) => {
+                                // Assign custom navigation elements to Swiper
+                                swiper.params.navigation.prevEl = prevRef.current;
+                                swiper.params.navigation.nextEl = nextRef.current;
+                            }}
+                            slidesPerView={3}
+                            spaceBetween={16}
+                            loop={false}
+                        >
+                            {/* Slides */}
+                            <SwiperSlide>
+                                <div className='eventCardWrapper'>
+                                    <img src="/assets/img/eventCard1.png" alt="" className='eventCardImage' />
+                                    <div className='eventCardContent'>
+                                        <h3 className='text20b mb5'>Event Name</h3>
+                                        <p className='text16r mb7'>Lorem ipsum dolor sit amet consectetur.
+                                            Quisque id morbi facilisis nisl dui.
+                                            Justo velit pretium ornare egestas.
+                                            Lorem ipsum dolor sit amet consectetur.
+                                        </p>
+                                        <Button name={'View Event'} svgIcon={<ViewEventIcon />}
+                                            className={'viewEvent text14b'}
+                                        />
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className='eventCardWrapper'>
+                                    <img src="/assets/img/eventCard2.png" alt="" className='eventCardImage' />
+                                    <div className='eventCardContent'>
+                                        <h3 className='text20b mb5'>Event Name</h3>
+                                        <p className='text16r mb7'>Lorem ipsum dolor sit amet consectetur.
+                                            Quisque id morbi facilisis nisl dui.
+                                            Justo velit pretium ornare egestas.
+                                            Lorem ipsum dolor sit amet consectetur.
+                                        </p>
+                                        <Button name={'View Event'} svgIcon={<ViewEventIcon />}
+                                            className={'viewEvent text14b'}
+                                        />
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className='eventCardWrapper'>
+                                    <img src="/assets/img/eventCard2.png" alt="" className='eventCardImage' />
+                                    <div className='eventCardContent'>
+                                        <h3 className='text20b mb5'>Event Name</h3>
+                                        <p className='text16r mb7'>Lorem ipsum dolor sit amet consectetur.
+                                            Quisque id morbi facilisis nisl dui.
+                                            Justo velit pretium ornare egestas.
+                                            Lorem ipsum dolor sit amet consectetur.
+                                        </p>
+                                        <Button name={'View Event'} svgIcon={<ViewEventIcon />}
+                                            className={'viewEvent text14b'}
+                                        />
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className='eventCardWrapper'>
+                                    <img src="/assets/img/eventCard2.png" alt="" className='eventCardImage' />
+                                    <div className='eventCardContent'>
+                                        <h3 className='text20b mb5'>Event Name</h3>
+                                        <p className='text16r mb7'>Lorem ipsum dolor sit amet consectetur.
+                                            Quisque id morbi facilisis nisl dui.
+                                            Justo velit pretium ornare egestas.
+                                            Lorem ipsum dolor sit amet consectetur.
+                                        </p>
+                                        <Button name={'View Event'} svgIcon={<ViewEventIcon />}
+                                            className={'viewEvent text14b'}
+                                        />
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        </Swiper>
+
+
 
                     </div>
                 </div>

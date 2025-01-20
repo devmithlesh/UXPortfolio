@@ -6,7 +6,7 @@
 
 .container {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -127,7 +127,7 @@
     width: 100%;
     background: url('../../../public/assets/svg/arrowLine.svg');
     background-repeat: no-repeat;
-    background-position: 99.5% 23%;
+    background-position: 95.4% 132px;
 
     .myDesignBlock {
         display: grid;
@@ -297,6 +297,11 @@
         align-items: center;
         flex-wrap: wrap;
         width: 100%;
+        position: relative;
+
+        .swiper {
+            padding: 50px 0;
+        }
     }
 
     .eventBlockWrap .eventCardWrapper {
@@ -304,12 +309,51 @@
         overflow: hidden;
         border-radius: 8px;
         background: var(--white);
+        transition: 0.4s;
+
+        .eventCardImage {
+            width: 100%;
+        }
+    }
+
+    .eventCardWrapper:hover {
         box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.20);
     }
 
     .eventCardContent {
         padding: 16px;
     }
+
+    .viewEvent svg {
+        transition: 0.3s;
+    }
+
+    .viewEvent:hover svg {
+        transform: translate(4px, -4px);
+    }
+
+}
+
+.swiperButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.custom-next-button {
+    right: -50px;
+}
+
+.custom-prev-button {
+    left: -50px;
+}
+
+.iconRotate {
+    transform: rotate(180deg);
+}
+
+.swiper-button-disabled svg path {
+    stroke: #C4C4C4
 }
 
 /* End Event section */
