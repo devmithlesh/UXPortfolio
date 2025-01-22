@@ -9,6 +9,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules'; // Updated import path
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import Footer from '@/layout/Footer';
 
 const page = () => {
 
@@ -70,6 +72,7 @@ const page = () => {
                 <div className='container'>
                     <h2 className='heading2'>My Design Process</h2>
                     <div className='myDesignBlock mt50'>
+                        <img src="/assets/svg/arrowLine.svg" alt="arrowLine" className='arrowLineDesign' />
                         <div className="designProcessCardWrap">
                             <img src="/assets/img/research.png" alt="research" className="designImage" />
 
@@ -218,9 +221,7 @@ const page = () => {
 
                         <Swiper
                             modules={[Navigation, Pagination]} // Include the Navigation module
-                            pagination={{
-                                clickable: true, // Make pagination dots clickable
-                            }}
+                            pagination={{ clickable: true }}
                             navigation={{
                                 prevEl: prevRef.current,
                                 nextEl: nextRef.current,
@@ -306,6 +307,111 @@ const page = () => {
                     </div>
                 </div>
             </section>
+
+            <section className='paddingY reviewSection'>
+                <div className='container'>
+                    <div className='commonHeading'>
+                        <h2 className='heading2'>Reviews</h2>
+                        <img src="/assets/svg/textWrite.svg" alt="" className='textWriteIcon' />
+                    </div>
+
+                    <div className='eventBlockWrap'>
+                        <button ref={prevRef} className="custom-prev-button swiperButton">
+                            <SwiperArrow className="iconRotate" />
+                        </button>
+
+                        <button ref={nextRef} className="custom-next-button swiperButton">
+                            <SwiperArrow />
+                        </button>
+
+                        <Swiper
+                            modules={[Navigation, Pagination]} // Include the Navigation module
+                            pagination={{ clickable: true }}
+                            navigation={{
+                                prevEl: prevRef.current,
+                                nextEl: nextRef.current,
+                            }}
+                            onBeforeInit={(swiper) => {
+                                // Assign custom navigation elements to Swiper
+                                swiper.params.navigation.prevEl = prevRef.current;
+                                swiper.params.navigation.nextEl = nextRef.current;
+                            }}
+                            slidesPerView={3}
+                            spaceBetween={16}
+                            loop={false}
+                        >
+                            {/* Slides */}
+                            <SwiperSlide>
+                                <div className='reviewCardBlock'>
+                                    <p className='text16r'>“Gunjan is an extremely creative and innovative engineer. She is a leader in all aspects.
+                                        Her excellence in the field of design thinking and creativity outshines her personality.
+                                        Her leadership and organizational skills have been invaluable to the company. ”</p>
+                                    <div className='profileCardBlock mt20'>
+                                        <img src="/assets/img/reviewCard.png" alt="" />
+                                        <div className='detailProfileCard'>
+                                            <h3>Punit Jain</h3>
+                                            <p>Reskilll Co-Founder</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className='reviewCardBlock'>
+                                    <p className='text16r'>“Gunjan is an extremely creative and innovative engineer. She is a leader in all aspects.
+                                        Her excellence in the field of design thinking and creativity outshines her personality.
+                                        Her leadership and organizational skills have been invaluable to the company. ”</p>
+                                    <div className='profileCardBlock mt20'>
+                                        <img src="/assets/img/reviewCard.png" alt="" />
+                                        <div className='detailProfileCard'>
+                                            <h3>Rohit Sardana</h3>
+                                            <p>Reskilll Co-Founder</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div className='reviewCardBlock'>
+                                    <p className='text16r'>“Gunjan is an extremely creative and innovative engineer. She is a leader in all aspects.
+                                        Her excellence in the field of design thinking and creativity outshines her personality.
+                                        Her leadership and organizational skills have been invaluable to the company. ”</p>
+                                    <div className='profileCardBlock mt20'>
+                                        <img src="/assets/img/reviewCard.png" alt="" />
+                                        <div className='detailProfileCard'>
+                                            <h3>Ramchandra Kumble</h3>
+                                            <p>Reskilll Co-Founder</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+
+                            <SwiperSlide>
+                                <div className='reviewCardBlock'>
+                                    <p className='text16r'>“Gunjan is an extremely creative and innovative engineer. She is a leader in all aspects.
+                                        Her excellence in the field of design thinking and creativity outshines her personality.
+                                        Her leadership and organizational skills have been invaluable to the company. ”</p>
+                                    <div className='profileCardBlock mt20'>
+                                        <img src="/assets/img/reviewCard.png" alt="" />
+                                        <div className='detailProfileCard'>
+                                            <h3>Punit Jain</h3>
+                                            <p>Reskilll Co-Founder</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        </Swiper>
+                    </div>
+                </div>
+            </section>
+
+            <section className='letsDiscussSection'>
+                <div className='container'>
+                    <div className='letsDiscussBlock'>
+
+                    </div>
+                </div>
+            </section>
+
+            <Footer />
         </div>
     )
 }

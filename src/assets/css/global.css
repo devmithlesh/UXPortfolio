@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -125,9 +127,7 @@
 /* my Design Section */
 .myDesignSection {
     width: 100%;
-    background: url('../../../public/assets/svg/arrowLine.svg');
-    background-repeat: no-repeat;
-    background-position: 95.4% 132px;
+
 
     .myDesignBlock {
         display: grid;
@@ -135,6 +135,13 @@
         place-items: center;
         gap: 20px;
         width: 100%;
+        position: relative;
+
+        .arrowLineDesign {
+            position: absolute;
+            right: -50px;
+            top: -59px;
+        }
     }
 
     .contentCardProcess {
@@ -334,10 +341,103 @@
 
 }
 
+.reviewSection {
+    width: 100%;
+
+    .eventBlockWrap {
+        width: 100%;
+        position: relative;
+    }
+
+    .commonHeading {
+        position: relative;
+    }
+
+    .textWriteIcon {
+        position: absolute;
+        left: 85px;
+        top: -100px;
+    }
+
+    .reviewCardBlock {
+        border-radius: 8px;
+        background: var(--white);
+        padding: 24px;
+    }
+
+    .reviewCardBlock:hover {
+        box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.06);
+    }
+
+    .profileCardBlock {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .detailProfileCard {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            h3 {
+                color: #DA4040;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 120%;
+                letter-spacing: 0.08px;
+                font-family: "Inter", serif;
+            }
+
+            p {
+                color: #000;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 130%;
+                letter-spacing: 0.112px;
+                font-family: "Inter", serif;
+
+            }
+        }
+    }
+
+    .swiper {
+        padding: 50px 0;
+    }
+}
+
+.footerBlock {
+    width: 100%;
+    padding: 30px 0;
+    border-top: 1px solid #EDEDED;
+
+    .footerWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .socialIconWrap {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+}
+
+
+
 .swiperButton {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #DA4040;
+}
+
+.swiper-pagination-bullet {
+    background: #D9D9D9;
 }
 
 .custom-next-button {
