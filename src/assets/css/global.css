@@ -457,3 +457,93 @@
 }
 
 /* End Event section */
+
+/* lastSection Lets */
+.letsDiscussBlock {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .calenderIcon {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+
+        .detailText {
+            display: flex;
+            flex: 1;
+            text-align: left;
+            width: 100%;
+            max-width: 444px;
+        }
+    }
+
+    .bookMeetDetail {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .rightBookMeetBlock {
+        width: 100%;
+        max-width: 760px;
+        border-radius: 50px;
+        border: 1px solid #EDEDED;
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+    }
+}
+
+/* End lastSection Lets */
+
+.pageNavigateBlock {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .leftArrowRoute {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        color: #595959;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .leftArrowRoute svg path,
+    .leftArrowRoute svg {
+        transition: 0.3s;
+    }
+
+    .leftArrowRoute:hover svg path {
+        stroke: var(--black);
+    }
+
+    .leftArrowRoute:hover svg {
+        transform: translateX(-4px);
+    }
+
+    .leftArrowRoute:hover {
+        color: var(--black);
+    }
+
+    span {
+        color: var(--black);
+    }
+}
+
+.projectViewBlock {
+    width: 100%;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+    }
+}

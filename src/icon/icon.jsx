@@ -113,7 +113,26 @@ function ViewEventIcon() {
     )
 }
 
+function NavigateArrowLeft() {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M7.97502 4.94168L2.91669 10L7.97502 15.0583" stroke="#595959" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M17.0834 10H3.05835" stroke="#595959" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+    )
+}
+
+function MoreThenArrow({ color }) {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path fillRule="evenodd" clipRule="evenodd" d="M7.05806 4.55806C7.30214 4.31398 7.69786 4.31398 7.94194 4.55806L12.9419 9.55806C13.186 9.80214 13.186 10.1979 12.9419 10.4419L7.94194 15.4419C7.69786 15.686 7.30214 15.686 7.05806 15.4419C6.81398 15.1979 6.81398 14.8021 7.05806 14.5581L11.6161 10L7.05806 5.44194C6.81398 5.19786 6.81398 4.80214 7.05806 4.55806Z" fill={color ? color : "black"} />
+        </svg>
+    )
+}
+
 export {
+    MoreThenArrow,
+    NavigateArrowLeft,
     ViewEventIcon,
     CreateIcon,
     ArrowIconRight,

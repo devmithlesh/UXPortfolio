@@ -6,7 +6,7 @@ const Footer = ({ className }) => {
         <footer className='footerBlock'>
             <div className="container">
                 <div className='footerWrapper'>
-                    <span className='text16r'>@ 2024 GunjanCreates. All rights Reserved</span>
+                    <span className='text16r textBlack'>@ 2024 GunjanCreates. All rights Reserved</span>
 
                     <div className='socialIconWrap'>
                         <Link href={'#'}><img src="/assets/svg/instagram.svg" alt="" /></Link>

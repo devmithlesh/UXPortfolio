@@ -133,6 +133,10 @@ button {
     color: var(--red);
 }
 
+.textBlack {
+    color: var(--black) !important;
+}
+
 .textRedItalic {
     color: var(--red);
     font-style: italic;
@@ -149,6 +153,14 @@ button {
     font-size: 14px;
     font-weight: 700;
     line-height: normal;
+}
+
+.text14r {
+    color: #595959;
+    font-family: var(--arialRegular);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23px;
 }
 
 .text16rl {
@@ -200,6 +212,23 @@ button {
     line-height: normal;
 }
 
+.text40b {
+    color: #000;
+    text-align: center;
+    font-family: var(--arialBold);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 80px;
+}
+
+.text72r {
+    color: #DA4040;
+    font-family: var(--mistral);
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 80px;
+}
+
 .underline {
     text-decoration: underline;
     text-decoration-style: solid;
@@ -229,12 +258,28 @@ button {
     margin-top: 50px;
 }
 
+.mt40 {
+    margin-top: 40px;
+}
+
+.mt60 {
+    margin-top: 60px;
+}
+
 .mb5 {
     margin-bottom: 5px;
 }
 
 .mb7 {
     margin-bottom: 7px;
+}
+
+.mb50 {
+    margin-bottom: 50px;
+}
+
+.mb100 {
+    margin-bottom: 100px;
 }
 
 /* End margin */

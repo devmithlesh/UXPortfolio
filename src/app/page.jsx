@@ -11,11 +11,21 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Footer from '@/layout/Footer';
+import { useRouter } from 'next/navigation';
 
 const page = () => {
 
     const prevRef = useRef(null);
     const nextRef = useRef(null);
+
+    const router = useRouter();
+
+    const handleClick = () => {
+        router.push('/projects');
+    };
+    const handleClickView = () => {
+        router.push('/projects/viewproject');
+    };
 
     return (
         <div className='mainPage'>
@@ -163,7 +173,7 @@ const page = () => {
                         <h2 className='heading2 iconHeading'>My design Projects
                             <img src="/assets/svg/projectVector.svg" alt="" />
                         </h2>
-                        <Button name={'View all'} className={'red_arrow_link'} svgIcon={<ArrowIconRight />} />
+                        <Button name={'View all'} className={'red_arrow_link'} svgIcon={<ArrowIconRight />} onClick={handleClick} />
                     </div>
                     <div className='myProjectBlock mt50'>
                         <div className='myProjectCardWrapper'>
@@ -179,7 +189,7 @@ const page = () => {
                                     (Augmented Reality) filters with businesses seeking
                                     innovative and engaging filters for their brand. </p>
 
-                                <Button name={'View complete design'} svgIcon={<ArrowIconRight />} className={'red_arrow_link'} />
+                                <Button name={'View complete design'} svgIcon={<ArrowIconRight />} className={'red_arrow_link'} onClick={handleClickView} />
                             </div>
                             <img src="/assets/img/projectImage1.png" alt="projectImage1" className='projectcardImg' />
                         </div>
@@ -403,10 +413,25 @@ const page = () => {
                 </div>
             </section>
 
-            <section className='letsDiscussSection'>
+            <section className='paddingY letsDiscussSection'>
                 <div className='container'>
                     <div className='letsDiscussBlock'>
+                        <h3 className='text40b'>Have an awesome project idea?</h3>
+                        <h2 className='text72r'>Let's Discuss</h2>
 
+                        <div className='bookMeetDetail'>
+                            <div className="rightBookMeetBlock mt60">
+                                <div className="calenderIcon">
+                                    <img src="/assets/svg/calender.svg" alt="" />
+                                    <div className="detailText text16r">
+                                        I'm happy to offer you a 15-30 mins free chat at a time that works for you, don't hesitate to reach out and let's talk about it!
+                                    </div>
+                                </div>
+                                <Button name={'Book a meet'} buttonColor={'red_fill_button'} />
+                            </div>
+
+                            <p className='text20ri'>Or mail at: <Link className='textBlack underline' href={'mailto:gunjancreates871@gmail.com'}>gunjancreates871@gmail.com</Link></p>
+                        </div>
                     </div>
                 </div>
             </section>

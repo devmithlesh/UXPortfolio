@@ -1,8 +1,8 @@
 import React from 'react'
 import style from './Button.module.css'
-const Button = ({ className, name, svgIcon, imgIcon, buttonColor }) => {
+const Button = ({ className, name, svgIcon, imgIcon, buttonColor, onClick }) => {
     return (
-        <button className={`button ${className} ${style[buttonColor]}`}>
+        <button className={`button ${className} ${style[buttonColor]}`} onClick={onClick}>
             {
                 imgIcon && imgIcon
             }
