@@ -244,6 +244,12 @@ const page = () => {
                             slidesPerView={3}
                             spaceBetween={16}
                             loop={false}
+
+                            breakpoints={{
+                                320: { slidesPerView: 1 },  // Mobile
+                                640: { slidesPerView: 2 },  // Tablets
+                                1024: { slidesPerView: 3 }, // Small laptops
+                            }}
                         >
                             {/* Slides */}
                             <SwiperSlide>
@@ -349,6 +355,12 @@ const page = () => {
                             slidesPerView={3}
                             spaceBetween={16}
                             loop={false}
+
+                            breakpoints={{
+                                320: { slidesPerView: 1 },  // Mobile
+                                640: { slidesPerView: 2 },  // Tablets
+                                1024: { slidesPerView: 3 }, // Small laptops
+                            }}
                         >
                             {/* Slides */}
                             <SwiperSlide>

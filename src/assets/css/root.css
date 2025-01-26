@@ -289,3 +289,36 @@ button {
         display: none;
     }
 }
+
+@media (max-width:767px) {
+
+    .red_arrow_link,
+    .text16r {
+        font-size: 14px;
+    }
+
+    .heading2 {
+        font-size: 44px !important;
+    }
+
+    .text28b {
+        font-size: 20px !important;
+    }
+
+    .text20b {
+        font-size: 18px;
+    }
+
+    .text20ri {
+        font-size: 13px;
+    }
+
+    .text72r {
+        font-size: 44px;
+    }
+
+    .profileCardBlock>img {
+        width: 44px;
+    }
+
+}
